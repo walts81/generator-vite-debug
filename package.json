@@ -30,7 +30,7 @@
     "jest": "^26.1.0"
   },
   "engines": {
-    "npm": ">= 4.0.0"
+    "npm": ">= 16.0.0"
   },
   "dependencies": {
     "yeoman-generator": "^3.1.1",
@@ -57,9 +57,17 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "eslint .",
-    "format": "prettier . --write"
+    "lint": "eslint ./generators",
+    "format": "prettier ./generators --write",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags",
+    "version-patch": "npm version patch -m \"updated version to %s\"",
+    "version-minor": "npm version minor -m \"updated version to %s\"",
+    "version-major": "npm version major -m \"updated version to %s\""
   },
-  "repository": "walts81/generator-vite-debug",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/walts81/generator-vite-debug.git"
+  },
   "license": "MIT"
 }
