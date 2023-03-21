@@ -1,6 +1,6 @@
 {
   "name": "@walts81/generator-vite-debug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create vscode debug configuration using Vite",
   "homepage": "",
   "author": {
